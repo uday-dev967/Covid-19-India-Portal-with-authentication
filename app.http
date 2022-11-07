@@ -1,0 +1,72 @@
+POST http://localhost:3000/users/
+Content-Type: application/json
+
+{    
+    "username": "rahul123",
+    "password": "rahul@456",
+    "gender":"male",
+    "location":"hyderabad"
+}
+###
+POST http://localhost:3000/login/
+Content-Type: application/json
+
+{    
+    "username": "rahul123",
+    "password": "rahul@456"
+}
+
+###
+
+GET http://localhost:3000/states/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJhaHVsMTIzIiwiaWF0IjoxNjY3ODIyNTUzfQ.qdFjMWQE5SJVWanp4vAnoC03T0DnvaknzPvlQEa6PBs
+
+###
+GET http://localhost:3000/states/1/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJhaHVsMTIzIiwiaWF0IjoxNjY3ODIyNTUzfQ.qdFjMWQE5SJVWanp4vAnoC03T0DnvaknzPvlQEa6PBs
+
+###
+
+GET http://localhost:3000/districts/1/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJhaHVsMTIzIiwiaWF0IjoxNjY3ODIyNTUzfQ.qdFjMWQE5SJVWanp4vAnoC03T0DnvaknzPvlQEa6PBs
+
+###
+
+POST http://localhost:3000/districts/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJhaHVsMTIzIiwiaWF0IjoxNjY3ODIyNTUzfQ.qdFjMWQE5SJVWanp4vAnoC03T0DnvaknzPvlQEa6PBs
+
+{
+  "districtName": "Bagalkot",
+  "stateId": 3,
+  "cases": 2323,
+  "cured": 2000,
+  "active": 315,
+  "deaths": 8
+}
+
+###
+
+DELETE http://localhost:3000/districts/2/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJhaHVsMTIzIiwiaWF0IjoxNjY3ODIyNTUzfQ.qdFjMWQE5SJVWanp4vAnoC03T0DnvaknzPvlQEa6PBs
+
+###
+
+PUT http://localhost:3000/districts/767/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJhaHVsMTIzIiwiaWF0IjoxNjY3ODIyNTUzfQ.qdFjMWQE5SJVWanp4vAnoC03T0DnvaknzPvlQEa6PBs
+
+{
+  "districtName": "Nadia",
+  "stateId": 3,
+  "cases": 9628,
+  "cured": 6524,
+  "active": 3000,
+  "deaths": 104
+}
+
+###
+GET http://localhost:3000/states/1/stats/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJhaHVsMTIzIiwiaWF0IjoxNjY3ODIyNTUzfQ.qdFjMWQE5SJVWanp4vAnoC03T0DnvaknzPvlQEa6PBs
+
+###
